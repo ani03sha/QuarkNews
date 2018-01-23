@@ -3,11 +3,15 @@
     package="org.anirudh.redquark.quarknews">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name=".application.QuarkNewsApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:fullBackupContent="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashActivity">
@@ -22,6 +26,12 @@
             android:name=".receiver.ConnectivityReceiver"
             android:enabled="true"
             android:exported="true" />
+
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".HomeActivity"></activity>
     </application>
 
 </manifest>

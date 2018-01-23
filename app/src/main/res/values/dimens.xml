@@ -1,0 +1,55 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16sp</dimen>
+    <dimen name="activity_vertical_margin">16sp</dimen>
+    <dimen name="fab_margin">16sp</dimen>
+    <dimen name="logo_w_h">100sp</dimen>
+    <dimen name="ic_clear_margin">16sp</dimen>
+    <dimen name="padding_list_row">16sp</dimen>
+    <dimen name="messages_padding_left">72sp</dimen>
+    <dimen name="icon_width_height">40sp</dimen>
+    <dimen name="msg_text_primary">16sp</dimen>
+    <dimen name="msg_text_secondary">14sp</dimen>
+    <dimen name="icon_star">25sp</dimen>
+    <dimen name="icon_text">22sp</dimen>
+    <dimen name="timestamp">12sp</dimen>
+
+    <!--values for the more offers activity -->
+    <dimen name="feed_item_margin">10sp</dimen>
+    <dimen name="feed_item_padding_top_bottom">20sp</dimen>
+    <dimen name="feed_item_padding_left_right">15sp</dimen>
+    <dimen name="feed_item_profile_pic">50sp</dimen>
+    <dimen name="feed_item_profile_info_padd">10sp</dimen>
+    <dimen name="feed_item_profile_name">15sp</dimen>
+    <dimen name="feed_item_timestamp">13sp</dimen>
+    <dimen name="feed_item_status_pad_left_right">15sp</dimen>
+    <dimen name="feed_item_status_pad_top">13sp</dimen>
+    <dimen name="feed_item_corner_radius">3sp</dimen>
+    <dimen name="feed_item_border_width">1sp</dimen>
+
+    <dimen name="icon_top_margin">24sp</dimen>
+    <dimen name="icon_bottom_margin">24sp</dimen>
+    <dimen name="title_bottom_margin">16sp</dimen>
+    <dimen name="field_width_standard">160sp</dimen>
+
+    <dimen name="inner_padding">8sp</dimen>
+    <dimen name="cover_size_mini">40sp</dimen>
+    <dimen name="fab_vertical_margin">-20sp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="item_offset">10sp</dimen>
+    <dimen name="detail_backdrop_height">250sp</dimen>
+    <dimen name="backdrop_title">30sp</dimen>
+    <dimen name="backdrop_subtitle">18sp</dimen>
+    <dimen name="card_margin">5sp</dimen>
+    <dimen name="card_album_radius">0sp</dimen>
+    <dimen name="album_cover_height">160sp</dimen>
+    <dimen name="album_title_padding">10sp</dimen>
+    <dimen name="album_title">15sp</dimen>
+    <dimen name="songs_count_padding_bottom">5sp</dimen>
+    <dimen name="songs_count">12sp</dimen>
+    <dimen name="ic_album_overflow_width">20sp</dimen>
+    <dimen name="ic_album_overflow_height">30sp</dimen>
+    <dimen name="ic_album_overflow_margin_top">10sp</dimen>
+
+</resources>
