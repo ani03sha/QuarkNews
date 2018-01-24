@@ -95,5 +95,6 @@
     <string name="launch_streaming_text">Launch Streaming</string>
     <string name="clear_playlist_text">Clear Playlist</string>
     <string name="logo_text">Logo</string>
+    <string name="backdrop_text">Backdrop Text</string>
 
 </resources>

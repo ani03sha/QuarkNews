@@ -8,9 +8,6 @@ package org.anirudh.redquark.quarknews.constants;
 
 public final class Constant {
 
-    /*Time out interval for the SplashActivity*/
-    public final static int SPLASH_TIME_OUT = 3000;
-
     /*URL to get all the data in JSON format*/
     public final static String URL = "http://starlord.hackerearth.com/newsjson";
 

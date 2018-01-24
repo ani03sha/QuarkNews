@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/search"
+        android:title="@string/search_text"
+        android:icon="@drawable/search_icon"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="collapseActionView|ifRoom" />
+
+    <item android:id="@+id/settings"
+        android:title="@string/settings_text"
+        android:icon="@drawable/settings_icon"
+        android:orderInCategory="300"
+        app:showAsAction="collapseActionView|ifRoom" />
+
+    <item android:id="@+id/portfolio"
+        android:title="@string/portfolio_text"
+        android:icon="@drawable/profile_icon"
+        android:orderInCategory="300"
+        app:showAsAction="collapseActionView|ifRoom" />
+</menu>

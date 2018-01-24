@@ -31,7 +31,10 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".WebActivity" />
+        <activity android:name=".FavoritesActivity" />
+        <activity android:name=".PortfolioActivity"></activity>
     </application>
 
 </manifest>
