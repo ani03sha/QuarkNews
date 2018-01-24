@@ -19,8 +19,8 @@ public class WebActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
 
-        webView = (WebView) findViewById(R.id.webView);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        webView = findViewById(R.id.webView);
+        progressBar = findViewById(R.id.progressBar);
 
         onNewIntent(getIntent());
 

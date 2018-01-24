@@ -12,5 +12,5 @@ public final class Constant {
     public final static String URL = "http://starlord.hackerearth.com/newsjson";
 
     /*Linked In URL*/
-    public static final String PORTFOLIO_URL = "https://www.linkedin.com/in/anirshar/";
+    public static final String PORTFOLIO_URL = "https://github.com/ani03sha?tab=repositories";
 }

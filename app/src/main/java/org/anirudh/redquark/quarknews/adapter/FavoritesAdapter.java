@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.anirudh.redquark.quarknews.HomeActivity;
 import org.anirudh.redquark.quarknews.R;
 import org.anirudh.redquark.quarknews.WebActivity;
 import org.anirudh.redquark.quarknews.model.NewsItem;
@@ -20,16 +21,14 @@ import org.anirudh.redquark.quarknews.util.SharedPreference;
 
 import java.util.List;
 
-public class CustomListViewAdapter extends ArrayAdapter<NewsItem> {
-
+public class FavoritesAdapter extends ArrayAdapter<NewsItem> {
     private Activity activity;
     private Typeface typeface;
     private Context context;
     private SharedPreference sharedPreference;
     private List<NewsItem> newsItems;
 
-    public CustomListViewAdapter(Context context, Activity activity, int resource,
-                                 List<NewsItem> items, Typeface typeface) {
+    public FavoritesAdapter(Context context, Activity activity, int resource, List<NewsItem> items, Typeface typeface) {
         super(activity, resource, items);
         this.activity = activity;
         this.typeface = typeface;
@@ -40,35 +39,34 @@ public class CustomListViewAdapter extends ArrayAdapter<NewsItem> {
 
     @NonNull
     @Override
-    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent){
 
-        ViewHolder holder;
+        FavoritesAdapter.ViewHolder holder;
         LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         // If holder not exist then locate all view from UI file.
-        if (convertView == null) {
+        if(convertView == null){
             // inflate UI from the XML file
             if (inflater != null) {
-                convertView = inflater.inflate(R.layout.item_listview, parent, false);
+                convertView = inflater.inflate(R.layout.favorites_listview, parent, false);
             }
             //get all UI view
-            holder = new ViewHolder(convertView);
+            holder = new FavoritesAdapter.ViewHolder(convertView);
             // set Tag for holder
             if (convertView != null) {
                 convertView.setTag(holder);
             }
-        } else {
+        }else{
             // if holder created, get tag from view
-            holder = (ViewHolder) convertView.getTag();
+            holder = (FavoritesAdapter.ViewHolder) convertView.getTag();
         }
 
         final NewsItem item = getItem(position);
         if (item != null) {
             holder.title.setText(item.getTitle());
             holder.publisher.setText(String.format("From: %s", item.getPublisher()));
-            //  holder.timestamp.setText((int) item.getTimestamp());
             String businessCategory = item.getCategory();
 
-            switch (businessCategory) {
+            switch (businessCategory){
 
                 case "b":
                     businessCategory = "Business";
@@ -86,7 +84,6 @@ public class CustomListViewAdapter extends ArrayAdapter<NewsItem> {
                     businessCategory = "Health";
             }
             holder.category.setText(String.format("Category: %s", businessCategory));
-
             holder.title.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -105,14 +102,15 @@ public class CustomListViewAdapter extends ArrayAdapter<NewsItem> {
                 }
             });
 
-            holder.favorite.setOnClickListener(new View.OnClickListener() {
+            holder.remove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     boolean flag = checkFavoriteItem(item);
                     if(!flag){
-                        sharedPreference.addFavorite(activity, item);
+                        sharedPreference.removeFavorite(activity, item);
                     }
-                    Toast.makeText(activity, "Item added to Favorites", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "Item is removed from Favorites", Toast.LENGTH_SHORT).show();
+                    activity.startActivity(new Intent(activity, HomeActivity.class));
                 }
             });
         }
@@ -120,8 +118,8 @@ public class CustomListViewAdapter extends ArrayAdapter<NewsItem> {
         /*If a product exists in shared preferences then set heart_red drawable
          * and set a tag*/
         if (checkFavoriteItem(item)) {
-            holder.favorite.setTypeface(typeface);
-            holder.favorite.setTag("red");
+            holder.remove.setTypeface(typeface);
+            holder.remove.setTag("grey");
         }
 
         return convertView;
@@ -130,12 +128,12 @@ public class CustomListViewAdapter extends ArrayAdapter<NewsItem> {
     private static class ViewHolder {
         private TextView title, category;
         private TextView publisher;
-        private Button favorite, viewStory;
+        private Button remove, viewStory;
 
         ViewHolder(View v) {
             title = v.findViewById(R.id.title);
             publisher = v.findViewById(R.id.publisher);
-            favorite = v.findViewById(R.id.favorite);
+            remove = v.findViewById(R.id.remove);
             viewStory = v.findViewById(R.id.viewStory);
             category = v.findViewById(R.id.category);
         }

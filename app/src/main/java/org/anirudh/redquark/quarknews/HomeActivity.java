@@ -137,11 +137,11 @@ public class HomeActivity extends AppCompatActivity implements ConnectivityRecei
         Intent intent = new Intent(HomeActivity.this, WebActivity.class);
         switch (menuItem.getItemId()) {
             case R.id.nav_first_fragment:
-                intent = new Intent(getApplicationContext(), FavoritesActivity.class);
+                intent = new Intent(HomeActivity.this, FavoritesActivity.class);
                 startActivity(intent);
                 break;
             case R.id.nav_second_fragment:
-                intent = new Intent(getApplicationContext(), PortfolioActivity.class);
+                intent = new Intent(HomeActivity.this, SettingsActivity.class);
                 startActivity(intent);
                 break;
             case R.id.nav_third_fragment:

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#f25268</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#000000</color>
+    <color name="colorPrimary">#B388FF</color>
+    <color name="colorPrimaryDark">#673AB7</color>
+    <color name="colorAccent">#FF1744</color>
+    <color name="colorItem">#FFCDD2</color>
 
     <!-- Gradient colors -->
     <color name="purple_500">#9C27B0</color>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:background="@color/feed_bg"
+    android:background="@color/colorItem"
     android:orientation="vertical">
 
     <LinearLayout
@@ -35,7 +36,7 @@
                     android:id="@+id/timestamp"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/timestamp"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/feed_item_timestamp" />
             </LinearLayout>
         </LinearLayout>
@@ -64,26 +65,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:paddingLeft="@dimen/feed_item_status_pad_left_right"
-            android:paddingRight="@dimen/feed_item_padding_left_right"
+            android:paddingStart="@dimen/feed_item_status_pad_left_right"
+            android:paddingEnd="@dimen/feed_item_padding_left_right"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/viewStory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="View Full Story"
+                android:text="@string/view_full_story_text"
                 android:layout_gravity="left"
                 android:textColor="@color/colorPrimaryDark"
-                android:background="@null" />
+                android:background="@null"
+                tools:ignore="RtlHardcoded" />
 
             <Button
                 android:id="@+id/favorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add to Favorites"
+                android:text="@string/add_favorites_text"
                 android:layout_gravity="right"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:background="@null" />
 

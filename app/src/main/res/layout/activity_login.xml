@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="@string/welcome_text"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -40,7 +40,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorPrimaryDark"
                 android:hint="@string/email_address_text"
                 android:inputType="textEmailAddress" />
 
@@ -58,7 +58,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/password_text"
-                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimaryDark"
                 android:inputType="textPassword" />
 
         </android.support.design.widget.TextInputLayout>
@@ -68,9 +69,10 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:background="@color/colorPrimaryDark"
             android:text="@string/login_btn_text"
-            android:textColor="@color/colorAccent" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn_reset_password"
@@ -79,7 +81,7 @@
             android:background="@null"
             android:text="@string/btn_forgot_password"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimaryDark" />
 
         <Button
             android:id="@+id/btn_signup"
@@ -88,7 +90,7 @@
             android:background="@null"
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="15sp" />
 
         <TextView
@@ -98,7 +100,8 @@
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
             android:text="@string/or_text"
-            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp" />
 
         <!-- Google Login Button -->

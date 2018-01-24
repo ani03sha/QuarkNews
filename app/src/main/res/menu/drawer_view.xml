@@ -3,12 +3,12 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_first_fragment"
-            android:title="Favorites" />
+            android:title="@string/favorites_text" />
         <item
             android:id="@+id/nav_second_fragment"
-            android:title="Edit Profile" />
+            android:title="@string/settings_text" />
         <item
             android:id="@+id/nav_third_fragment"
-            android:title="Portfolio" />
+            android:title="@string/portfolio_text" />
     </group>
 </menu>
